@@ -12,6 +12,8 @@
 		027B6FAB1ED16151008C0131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FA91ED16151008C0131 /* Main.storyboard */; };
 		027B6FAD1ED16151008C0131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FAC1ED16151008C0131 /* Assets.xcassets */; };
 		027B6FB01ED16151008C0131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FAE1ED16151008C0131 /* LaunchScreen.storyboard */; };
+		027B6FB81ED16225008C0131 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FB71ED16225008C0131 /* GoogleService-Info.plist */; };
+		61FAD285B8FC231283019F29 /* Pods_W2W.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE9C52D70D5B81EB8ED92FD /* Pods_W2W.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		027B6FAC1ED16151008C0131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027B6FAF1ED16151008C0131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027B6FB11ED16151008C0131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		027B6FB71ED16225008C0131 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		428CAF4759DC6C77EB95E198 /* Pods-W2W.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W2W.release.xcconfig"; path = "Pods/Target Support Files/Pods-W2W/Pods-W2W.release.xcconfig"; sourceTree = "<group>"; };
+		6DE9C52D70D5B81EB8ED92FD /* Pods_W2W.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W2W.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8691D351113323B4A0698BFD /* Pods-W2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W2W/Pods-W2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61FAD285B8FC231283019F29 /* Pods_W2W.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				027B6FA41ED16151008C0131 /* W2W */,
 				027B6FA31ED16151008C0131 /* Products */,
+				B9C487D8BB13640F91DEC82B /* Pods */,
+				1F465545F4BC8D93BBF5CAE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				027B6FAC1ED16151008C0131 /* Assets.xcassets */,
 				027B6FAE1ED16151008C0131 /* LaunchScreen.storyboard */,
 				027B6FB11ED16151008C0131 /* Info.plist */,
+				027B6FB71ED16225008C0131 /* GoogleService-Info.plist */,
 			);
 			path = W2W;
+			sourceTree = "<group>";
+		};
+		1F465545F4BC8D93BBF5CAE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DE9C52D70D5B81EB8ED92FD /* Pods_W2W.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9C487D8BB13640F91DEC82B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8691D351113323B4A0698BFD /* Pods-W2W.debug.xcconfig */,
+				428CAF4759DC6C77EB95E198 /* Pods-W2W.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027B6FB41ED16151008C0131 /* Build configuration list for PBXNativeTarget "W2W" */;
 			buildPhases = (
+				163EC57F9C0799B717E88712 /* [CP] Check Pods Manifest.lock */,
 				027B6F9E1ED16151008C0131 /* Sources */,
 				027B6F9F1ED16151008C0131 /* Frameworks */,
 				027B6FA01ED16151008C0131 /* Resources */,
+				BA072FA042801FB91F0A8860 /* [CP] Embed Pods Frameworks */,
+				A1D7462CD961546ABACAC8FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,12 +155,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				027B6FB01ED16151008C0131 /* LaunchScreen.storyboard in Resources */,
+				027B6FB81ED16225008C0131 /* GoogleService-Info.plist in Resources */,
 				027B6FAD1ED16151008C0131 /* Assets.xcassets in Resources */,
 				027B6FAB1ED16151008C0131 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		163EC57F9C0799B717E88712 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1D7462CD961546ABACAC8FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W2W/Pods-W2W-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA072FA042801FB91F0A8860 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W2W/Pods-W2W-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		027B6F9E1ED16151008C0131 /* Sources */ = {
@@ -261,10 +340,12 @@
 		};
 		027B6FB51ED16151008C0131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8691D351113323B4A0698BFD /* Pods-W2W.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UAPN4Z9F3P;
 				INFOPLIST_FILE = W2W/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabilabs.W2W;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,10 +355,12 @@
 		};
 		027B6FB61ED16151008C0131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428CAF4759DC6C77EB95E198 /* Pods-W2W.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UAPN4Z9F3P;
 				INFOPLIST_FILE = W2W/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabilabs.W2W;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +387,7 @@
 				027B6FB61ED16151008C0131 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
