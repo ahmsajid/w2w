@@ -13,13 +13,16 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    
+    @IBOutlet weak var emailTextField: MaterialTextField!
+    @IBOutlet weak var passwordTextField: MaterialTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     @IBAction func FBButtonPressed(_ sender: Any) {
-        
         //Checking with Facebook if everything is ok
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
@@ -46,12 +49,29 @@ class SignInVC: UIViewController {
         }
     }
     
+    //MARK: EMAIL Sign-in Button
+    @IBAction func emailSignInBtnPressed(_ sender: Any) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                
+                if error == nil {
+                    print("Email authenticated with Firebase")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("Unable to authenticate with Firebase using email or password.")
+                        } else {
+                            print("Successfully authenticated with email.")
+                        }
+                    })
+                }
+            })
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
