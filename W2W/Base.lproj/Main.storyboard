@@ -75,6 +75,9 @@
                                 <state key="normal" backgroundImage="f">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="FBButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YiE-K0-YE1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-ww-mFh">
                                 <rect key="frame" x="195.33333333333334" y="391" width="24" height="20"/>

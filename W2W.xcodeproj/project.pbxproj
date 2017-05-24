@@ -28,6 +28,7 @@
 		0269D4691ED4D5C300880329 /* RoundCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		0269D46B1ED4DE8D00880329 /* FBRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRoundButton.swift; sourceTree = "<group>"; };
 		0269D46D1ED4E07200880329 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		0269D46F1ED562E000880329 /* W2W.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = W2W.entitlements; sourceTree = "<group>"; };
 		0274D89C1ED3CBB800D9BE16 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0274D89E1ED3CBDC00D9BE16 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		027B6FA21ED16151008C0131 /* W2W.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W2W.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +95,7 @@
 		027B6FA41ED16151008C0131 /* W2W */ = {
 			isa = PBXGroup;
 			children = (
+				0269D46F1ED562E000880329 /* W2W.entitlements */,
 				027B6FA51ED16151008C0131 /* AppDelegate.swift */,
 				0274D89B1ED3CB6D00D9BE16 /* Services */,
 				0274D89A1ED3CB5D00D9BE16 /* Utilities */,
@@ -200,6 +202,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UAPN4Z9F3P;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
