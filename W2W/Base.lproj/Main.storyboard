@@ -48,7 +48,7 @@
                                     <constraint firstItem="1xe-j6-q3O" firstAttribute="centerY" secondItem="Ff9-xt-8xh" secondAttribute="centerY" id="Fif-c6-xPy"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-qB-xna" userLabel="SignInDesignView" customClass="MaterialView" customModule="W2W" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-qB-xna" userLabel="SignInDesignView" customClass="MaterialViewRounderCorner" customModule="W2W" customModuleProvider="target">
                                 <rect key="frame" x="20" y="168" width="374" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -204,24 +204,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-qD-7f2">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N7-jn-kIT" userLabel="TopView" customClass="MaterialView" customModule="W2W" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                <color key="backgroundColor" red="0.45059361310000001" green="0.61523904870000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Bfj-ss-aia"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-p5-59I" customClass="MaterialViewRounderCorner" customModule="W2W" customModuleProvider="target">
+                                <rect key="frame" x="20" y="85" width="374" height="65"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="WpD-Q6-yCV"/>
+                                </constraints>
+                            </view>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMT-we-S1h">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <navigationItem title="Feed" id="heD-1H-dXp">
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="7ff-Pi-ZF9">
-                                            <connections>
-                                                <action selector="SignOutBtnPressed:" destination="pjd-le-JF8" id="Xwd-bc-6AE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <tabBarItem systemItem="favorites" id="L4B-lb-Io3"/>
+                                    <tabBarItem systemItem="more" id="hvG-eu-jAm"/>
                                 </items>
-                            </navigationBar>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-V8-BxA">
+                                <rect key="frame" x="0.0" y="170" width="414" height="517"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" rowHeight="300" id="WmO-aI-UPd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WmO-aI-UPd" id="dEo-KZ-XxM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="299.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.45059361310000001" green="0.61523904870000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BDg-qD-7f2" firstAttribute="leading" secondItem="fOI-vw-11z" secondAttribute="leading" id="2C0-Ww-O9C"/>
-                            <constraint firstItem="BDg-qD-7f2" firstAttribute="top" secondItem="fOI-vw-11z" secondAttribute="top" constant="28" id="DjP-pC-hzA"/>
-                            <constraint firstAttribute="trailing" secondItem="BDg-qD-7f2" secondAttribute="trailing" id="WF0-ES-Tcv"/>
+                            <constraint firstAttribute="trailing" secondItem="5N7-jn-kIT" secondAttribute="trailing" id="7qv-5I-hRJ"/>
+                            <constraint firstItem="jxP-V8-BxA" firstAttribute="top" secondItem="dVM-p5-59I" secondAttribute="bottom" constant="20" id="99X-yg-atW"/>
+                            <constraint firstItem="dVM-p5-59I" firstAttribute="top" secondItem="5N7-jn-kIT" secondAttribute="bottom" constant="20" id="ACn-43-vcV"/>
+                            <constraint firstAttribute="trailing" secondItem="jxP-V8-BxA" secondAttribute="trailing" id="Ht1-4A-uN6"/>
+                            <constraint firstAttribute="trailing" secondItem="dVM-p5-59I" secondAttribute="trailing" constant="20" id="KNp-mq-g2O"/>
+                            <constraint firstItem="5N7-jn-kIT" firstAttribute="top" secondItem="fOI-vw-11z" secondAttribute="top" id="NEy-gC-Jl5"/>
+                            <constraint firstItem="5N7-jn-kIT" firstAttribute="leading" secondItem="fOI-vw-11z" secondAttribute="leading" id="Pmr-kh-Tas"/>
+                            <constraint firstItem="jxP-V8-BxA" firstAttribute="leading" secondItem="fOI-vw-11z" secondAttribute="leading" id="RX0-N6-Wc3"/>
+                            <constraint firstItem="dVM-p5-59I" firstAttribute="leading" secondItem="fOI-vw-11z" secondAttribute="leading" constant="20" id="Tls-gY-FpZ"/>
+                            <constraint firstAttribute="trailing" secondItem="EMT-we-S1h" secondAttribute="trailing" id="WaZ-HY-5A4"/>
+                            <constraint firstItem="EMT-we-S1h" firstAttribute="top" secondItem="jxP-V8-BxA" secondAttribute="bottom" id="cmd-Gr-ydj"/>
+                            <constraint firstItem="qYQ-HB-gsi" firstAttribute="top" secondItem="EMT-we-S1h" secondAttribute="bottom" id="dMt-t3-jTh"/>
+                            <constraint firstItem="EMT-we-S1h" firstAttribute="leading" secondItem="fOI-vw-11z" secondAttribute="leading" id="f54-Rc-ck8"/>
+                            <constraint firstItem="EMT-we-S1h" firstAttribute="top" secondItem="jxP-V8-BxA" secondAttribute="bottom" id="lrS-7f-6cI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -230,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAX-A2-1eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="-112"/>
+            <point key="canvasLocation" x="828.98550724637687" y="-112.50000000000001"/>
         </scene>
     </scenes>
     <resources>

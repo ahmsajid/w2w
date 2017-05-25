@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020F3D441ED78472008C5102 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020F3D431ED78472008C5102 /* RegistrationVC.swift */; };
+		020F3D461ED78B67008C5102 /* MaterialViewRounderCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020F3D451ED78B67008C5102 /* MaterialViewRounderCorner.swift */; };
 		0269D46A1ED4D5C300880329 /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269D4691ED4D5C300880329 /* RoundCornerButton.swift */; };
 		0269D46C1ED4DE8D00880329 /* FBRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269D46B1ED4DE8D00880329 /* FBRoundButton.swift */; };
 		0269D46E1ED4E07200880329 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269D46D1ED4E07200880329 /* MaterialTextField.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020F3D431ED78472008C5102 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		020F3D451ED78B67008C5102 /* MaterialViewRounderCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialViewRounderCorner.swift; sourceTree = "<group>"; };
 		0269D4691ED4D5C300880329 /* RoundCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		0269D46B1ED4DE8D00880329 /* FBRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRoundButton.swift; sourceTree = "<group>"; };
 		0269D46D1ED4E07200880329 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				0269D4691ED4D5C300880329 /* RoundCornerButton.swift */,
 				0269D46B1ED4DE8D00880329 /* FBRoundButton.swift */,
 				0269D46D1ED4E07200880329 /* MaterialTextField.swift */,
+				020F3D451ED78B67008C5102 /* MaterialViewRounderCorner.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				027B6FA71ED16151008C0131 /* SignInVC.swift */,
 				02802F8D1ED6A83D00E77872 /* FeedVC.swift */,
+				020F3D431ED78472008C5102 /* RegistrationVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 				027B6FA81ED16151008C0131 /* SignInVC.swift in Sources */,
 				027B6FA61ED16151008C0131 /* AppDelegate.swift in Sources */,
 				0274D89F1ED3CBDC00D9BE16 /* Constants.swift in Sources */,
+				020F3D441ED78472008C5102 /* RegistrationVC.swift in Sources */,
 				0269D46C1ED4DE8D00880329 /* FBRoundButton.swift in Sources */,
+				020F3D461ED78B67008C5102 /* MaterialViewRounderCorner.swift in Sources */,
 				0269D46A1ED4D5C300880329 /* RoundCornerButton.swift in Sources */,
 				02802F8E1ED6A83D00E77872 /* FeedVC.swift in Sources */,
 				0269D46E1ED4E07200880329 /* MaterialTextField.swift in Sources */,
