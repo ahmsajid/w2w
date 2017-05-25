@@ -18,6 +18,7 @@
 		027B6FAD1ED16151008C0131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FAC1ED16151008C0131 /* Assets.xcassets */; };
 		027B6FB01ED16151008C0131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FAE1ED16151008C0131 /* LaunchScreen.storyboard */; };
 		027B6FB81ED16225008C0131 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 027B6FB71ED16225008C0131 /* GoogleService-Info.plist */; };
+		02802F8E1ED6A83D00E77872 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02802F8D1ED6A83D00E77872 /* FeedVC.swift */; };
 		02FEDDB31ED175C600446992 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02FEDDB01ED175C600446992 /* Comfortaa-Bold.ttf */; };
 		02FEDDB41ED175C600446992 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02FEDDB11ED175C600446992 /* Comfortaa-Light.ttf */; };
 		02FEDDB51ED175C600446992 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02FEDDB21ED175C600446992 /* Comfortaa-Regular.ttf */; };
@@ -39,6 +40,7 @@
 		027B6FAF1ED16151008C0131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027B6FB11ED16151008C0131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027B6FB71ED16225008C0131 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02802F8D1ED6A83D00E77872 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		02FEDDB01ED175C600446992 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		02FEDDB11ED175C600446992 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		02FEDDB21ED175C600446992 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				027B6FA71ED16151008C0131 /* SignInVC.swift */,
+				02802F8D1ED6A83D00E77872 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				0274D89F1ED3CBDC00D9BE16 /* Constants.swift in Sources */,
 				0269D46C1ED4DE8D00880329 /* FBRoundButton.swift in Sources */,
 				0269D46A1ED4D5C300880329 /* RoundCornerButton.swift in Sources */,
+				02802F8E1ED6A83D00E77872 /* FeedVC.swift in Sources */,
 				0269D46E1ED4E07200880329 /* MaterialTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

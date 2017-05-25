@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -20,6 +21,14 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //check if key exist, then retrieve it
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
     
     @IBAction func FBButtonPressed(_ sender: Any) {
@@ -44,6 +53,11 @@ class SignInVC: UIViewController {
                     print("Unable to authtenticate with Firebase - \(error)")
                 } else {
                     print("Successfully authtenticated with Firebase")
+                    //For auto-sign-in
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
+                    
                 }
             })
         }
@@ -53,25 +67,31 @@ class SignInVC: UIViewController {
     @IBAction func emailSignInBtnPressed(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-                
                 if error == nil {
                     print("Email authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("Unable to authenticate with Firebase using email or password.")
                         } else {
                             print("Successfully authenticated with email.")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Data saved to Keychain: \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 }
 
