@@ -36,7 +36,7 @@ class SignInVC: UIViewController {
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("Unable to authenticate with Facebook - \(error)" )
+                print("Unable to authenticate with Facebook - \(String(describing: error))" )
             } else if result?.isCancelled == true {
                 print("User canceled facebook authtectication")
             } else {
@@ -50,7 +50,7 @@ class SignInVC: UIViewController {
         func firebaseAuth(_ credential: FIRAuthCredential) {
             FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
                 if error != nil {
-                    print("Unable to authtenticate with Firebase - \(error)")
+                    print("Unable to authtenticate with Firebase - \(String(describing: error))")
                 } else {
                     print("Successfully authtenticated with Firebase")
                     //For auto-sign-in
