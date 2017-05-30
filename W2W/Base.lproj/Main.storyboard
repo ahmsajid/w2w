@@ -200,12 +200,21 @@
                     <view key="view" contentMode="scaleToFill" id="owt-Ue-EwG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pag-Ss-vZS">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Registration" id="1xe-Uz-IeH"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qna-d8-5iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="566"/>
+            <point key="canvasLocation" x="60.869565217391312" y="565.76086956521749"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="Cct-0X-aXz">
@@ -222,15 +231,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N7-jn-kIT" userLabel="TopView" customClass="MaterialView" customModule="W2W" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="8OT-Db-zMI">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="8OT-Db-zMI">
                                         <rect key="frame" x="16" y="20" width="40" height="35"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Txd-cT-pmS"/>
                                             <constraint firstAttribute="width" constant="40" id="VMs-HA-9A2"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tBE-1c-Pgf" appends="YES" id="gDg-VN-aPm"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-kK-nOm">
-                                        <rect key="frame" x="177.33333333333334" y="24.333333333333336" width="61" height="27.000000000000007"/>
+                                        <rect key="frame" x="177" y="24" width="61" height="27"/>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -275,7 +288,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qlT-tL-hh5" secondAttribute="trailing" constant="8" id="MQC-Cy-Rc7"/>
                                     <constraint firstAttribute="height" constant="65" id="WpD-Q6-yCV"/>
@@ -401,7 +414,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.93725490199999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5N7-jn-kIT" secondAttribute="trailing" id="7qv-5I-hRJ"/>
                             <constraint firstItem="jxP-V8-BxA" firstAttribute="top" secondItem="dVM-p5-59I" secondAttribute="bottom" constant="16" id="99X-yg-atW"/>
@@ -425,6 +438,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAX-A2-1eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tBE-1c-Pgf" userLabel="Signout-Gesture">
+                    <connections>
+                        <action selector="SignOutBtnPressed:" destination="pjd-le-JF8" id="Yl1-lT-kIy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="-112.50000000000001"/>
         </scene>
