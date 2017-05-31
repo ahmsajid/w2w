@@ -14,7 +14,6 @@ import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
-    
     @IBOutlet weak var emailTextField: MaterialTextField!
     @IBOutlet weak var passwordTextField: MaterialTextField!
     
@@ -58,7 +57,6 @@ class SignInVC: UIViewController {
                         let userData = ["provider": credential.provider]
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
-                    
                 }
             })
         }

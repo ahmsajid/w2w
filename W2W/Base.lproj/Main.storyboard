@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qna-d8-5iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60.869565217391312" y="565.76086956521749"/>
+            <point key="canvasLocation" x="61" y="584"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="Cct-0X-aXz">
@@ -243,7 +243,7 @@
                                         </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-kK-nOm">
-                                        <rect key="frame" x="177" y="24" width="61" height="27"/>
+                                        <rect key="frame" x="177.33333333333334" y="24.333333333333336" width="61" height="27.000000000000007"/>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -264,12 +264,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qlT-tL-hh5" userLabel="TopStatusStackView">
                                         <rect key="frame" x="8" y="8" width="366" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="p3O-UY-CBw" userLabel="ImageSelection">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="p3O-UY-CBw" userLabel="ImageSelection">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="49"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="gPH-sY-ZYn"/>
                                                     <constraint firstAttribute="width" constant="50" id="mtH-Bf-nB3"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="iLx-TS-Fes" appends="YES" id="HKj-va-IEw"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-qM-Nsl" customClass="MaterialTextField" customModule="W2W" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="0.0" width="246" height="49"/>
@@ -443,6 +447,7 @@
                         <action selector="SignOutBtnPressed:" destination="pjd-le-JF8" id="Yl1-lT-kIy"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="iLx-TS-Fes" userLabel="CameraImage"/>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="-112.50000000000001"/>
         </scene>

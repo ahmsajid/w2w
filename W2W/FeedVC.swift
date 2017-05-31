@@ -19,6 +19,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        //this gets the data from Firebase Database
+        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            print(snapshot.value)
+        })
     }
     
     //MARK: Signout function
