@@ -16,9 +16,35 @@ class FeedPostCell: UITableViewCell {
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var numberOfLikeLabel: UILabel!
     
+    var post: Post!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
+    
+    //MARK: Configuring Cell
+    func configureCell(post: Post) {
+        self.post = post
+        self.caption.text = post.caption
+        self.numberOfLikeLabel.text = "\(post.likes)"
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
