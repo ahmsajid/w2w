@@ -10,19 +10,28 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    @IBOutlet weak var addImage: UIImageView!
 
     @IBOutlet weak var tableView: UITableView!
     
     //saving post data in an array
     var posts = [Post]()
-    
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        //initializing the imagePicker
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        
         
         //this gets the data from Firebase Database
         DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
@@ -75,9 +84,21 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    //Once an user selects an image, the pickerview will dismiss
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image
+        } else {
+            print("A valid image wasn't selected!")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
     
-    
-    
+    @IBAction func selectImageTapped(_ sender: Any) {
+        //first we get the image that is selected
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     
     
